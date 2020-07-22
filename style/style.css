@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+body {
+    background-color: #efeee7;
+    color: #333;
+}
+
+h1 {
+    font-family: Ranchers;
+    text-align: center;
+    background-color: #666;
+    color: #efeee7;
+}
+
+.card-title {
+    font-size: 32px;
+}
+
+.card-subtitle {
+    font-size: 24px;
+}
+
+.card-text {
+    margin-top: 16px;
+}
+
+.card {
+    text-align: center;
+}
+
+#input-list {
+    height: 38px;
+}
+
+#submit-btn {
+    margin-bottom: 5px;
+}
+
+#list {
+    background-color: white;
+}
+
+#list-items {
+    list-style: none;
+}
