@@ -20,15 +20,19 @@
     <!-- Card with instructions -->
     <!-- Will expand to fit list inside at bottom-->
     <div class="container">
-        <div class="row">
-            <div class="col card mt-5 mx-auto">
+        <div class="row justify-content-center">
+            <!-- Card is the only item on the row and is designated as a col -->
+            <div class="col-12 card mt-5">
                 <div class="card-body p-3">
+                    <!-- Title -->
                     <div class="card-title">
                         Type an entry and click "submit" to add something to the list.
                     </div>
+                    <!-- Subtitle -->
                     <div class="card-subtitle text-muted">
                         Click "complete" next to a list item to remove it from the list.
                     </div>
+                    <!-- Input text and submission button -->
                     <div class="card-text">
                         <form>
                             <div class="form-group">
@@ -37,7 +41,9 @@
                             </div>
                         </form>
                     </div>
+                    <!-- Card text such that the card is extended when a list item is added -->
                     <div class="card-text">
+                        <!-- Empty list at the beginning before any items are added -->
                         <ul id="list-items">
                         </ul>
                     </div>

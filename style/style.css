@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
 body {
     background-color: #efeee7;
@@ -26,6 +27,7 @@ h1 {
 
 .card {
     text-align: center;
+    font-family: Inconsolata;
 }
 
 #input-list {

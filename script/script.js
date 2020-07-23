@@ -23,6 +23,9 @@ submitBtn.addEventListener("click", function(event) {
         return
     }
 
+
+    //// NEW LIST ITEM
+
     // Creates new list element.
     var newItem = document.createElement("li");
 
@@ -31,6 +34,15 @@ submitBtn.addEventListener("click", function(event) {
 
     // Clears the user submission text box.
     userInput.value = "";
+
+    // Attaches the new list item as a child of the unordered list
+    list.appendChild(newItem);
+
+    // Adds styling for the list item
+    newItem.classList.add("justify-content-center");
+
+
+    //// BUTTON
 
     // Creates a new button to be appended to the list item
     var newBtn = document.createElement("button");
@@ -43,18 +55,12 @@ submitBtn.addEventListener("click", function(event) {
         list.removeChild(newItem);
     }
 
-    // Attaches the button as a child of the list
-    newItem.appendChild(newBtn);
-
-    // Attaches the new list item as a child of the unordered list
-    list.appendChild(newItem);
-
     // Adds styling for the button
     newBtn.classList.add("btn");
     newBtn.classList.add("btn-success");
     newBtn.style.margin = "16px";
 
-    // Adds styling for the list item
-    newItem.classList.add("justify-content-center");
+    // Attaches the button as a child of the list
+    newItem.appendChild(newBtn);
 
 });
