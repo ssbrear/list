@@ -34,7 +34,7 @@ h1 {
     height: 38px;
 }
 
-#submit-btn {
+#submit-btn #clear-btn {
     margin-bottom: 5px;
 }
 
@@ -44,4 +44,8 @@ h1 {
 
 #list-items {
     list-style: none;
+}
+
+li {
+    justify-content: center;
 }
