@@ -1,0 +1,27 @@
+{
+  "name": "list",
+  "version": "1.0.0",
+  "description": "This page is intended to be a list that keeps data in local storage so that I can continuously reference it throughout my day, even if I close the page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssbrear/list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssbrear/list/issues"
+  },
+  "homepage": "https://github.com/ssbrear/list#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5"
+  }
+}
