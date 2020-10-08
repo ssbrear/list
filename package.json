@@ -2,9 +2,9 @@
   "name": "list",
   "version": "1.0.0",
   "description": "This page is intended to be a list that keeps data in local storage so that I can continuously reference it throughout my day, even if I close the page.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/ssbrear/list#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
