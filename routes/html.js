@@ -3,6 +3,6 @@ module.exports = function (app) {
     res.render("index");
   });
   app.get("/list", function (req, res) {
-    res.render("list");
+    res.render("list", {list: req.item});
   });
 };

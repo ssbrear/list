@@ -1,6 +1,6 @@
 <head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
         body {
@@ -51,50 +51,64 @@
         li {
             justify-content: center;
         }
-    </style>
+  </style>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"
+  ></script>
 </head>
-
 <!-- Header -->
 <header class="container-fluid">
-    <div class="row">
-        <h1 class="col py-2">
-            My List
-        </h1>
-    </div>
+  <div class="row">
+    <h1 class="col py-2">
+      My List
+    </h1>
+  </div>
 </header>
-
 <!-- Card with instructions -->
 <!-- Will expand to fit list inside at bottom-->
 <div class="container">
-    <div class="row justify-content-center">
-        <!-- Card is the only item on the row and is designated as a col -->
-        <div class="col-12 card mt-5">
-            <div class="card-body p-3">
-                <!-- Title -->
-                <div class="card-title">
-                    Type an entry and click "submit" to add something to the list.
-                </div>
-                <!-- Subtitle -->
-                <div class="card-subtitle text-muted">
-                    Click "complete" next to a list item to remove it from the list.
-                </div>
-                <!-- Input text and submission button -->
-                <div class="card-text">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Add a list item" id="input-list">
-                            <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
-                            <button type="reset" id="clear-btn" class="btn btn-danger">Clear</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- Card text such that the card is extended when a list item is added -->
-                <div class="card-text">
-                    <!-- Empty list at the beginning before any items are added -->
-                    <ul id="list-items">
-                    </ul>
-                </div>
-            </div>
+  <div class="row justify-content-center">
+    <!-- Card is the only item on the row and is designated as a col -->
+    <div class="col-12 card mt-5">
+      <div class="card-body p-3">
+        <!-- Title -->
+        <div class="card-title">
+          Type an entry and click "submit" to add something to the list.
         </div>
+        <!-- Subtitle -->
+        <div class="card-subtitle text-muted">
+          Click "complete" next to a list item to remove it from the list.
+        </div>
+        <!-- Input text and submission button -->
+        <div class="card-text">
+          <form action="/api/createitem" method="POST">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Add a list item"
+                id="input-list"
+                name="item"
+              />
+              <button type="submit" id="submit-btn" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Card text such that the card is extended when a list item is added -->
+        <div class="card-text">
+          <!-- Empty list at the beginning before any items are added -->
+          <ul id="list-items">
+            {{#each item}}
+              <li>
+                {{this}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

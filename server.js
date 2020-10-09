@@ -19,8 +19,6 @@ const PORT = process.env.PORT || 3000;
 //// MIDDLEWARE
 // AUTHENTICATION
 app.use(passport.initialize());
-// HAS ACCESS TO 'public' FOLDER
-app.use(express.static("public"));
 // DATA PARSING
 app.use(express.json());
 app.use(urlencoded({ extended: true }));

@@ -9,5 +9,8 @@ module.exports = (sequelize, DataTypes) => {
       allownull: false,
     },
   });
+  UserList.associate = function (models) {
+    UserList.belongsTo(models.User);
+  };
   return UserList;
 };
