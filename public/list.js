@@ -1,7 +1,6 @@
 $(".complete-button").on("click", function () {
-  console.log("Clicked!");
   $.ajax({
-    url: `/api/deleteitem/${$(this).parent().text()}`,
+    url: `/api/deleteitem/${$(this).prev().data("id")}`,
     method: "DELETE",
-  }).then(() => console.log("Deleted"));
+  }).done(window.location.reload());
 });

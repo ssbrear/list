@@ -37,7 +37,7 @@ module.exports = (app) => {
   // Renders the list page with all of the user's items
   app.get("/list", checkAuth, (req, res) => {
     db.UserList.findAll({
-      attributes: ["item"],
+      attributes: ["item", "id"],
       where: {
         user_id: req.user.id,
       },
@@ -46,20 +46,17 @@ module.exports = (app) => {
       data.forEach((element) => {
         items.push(element.dataValues);
       });
-      console.log(items);
       res.render("list", { item: items });
     });
   });
 
-  app.delete("/api/deleteitem/:item", (req, res) => {
+  app.delete("/api/deleteitem/:id", (req, res) => {
+    console.log(req.params.id);
     db.UserList.destroy({
       where: {
-        item: req.params.item,
+        id: req.params.id,
       },
-    }).then((response) => {
-      console.log(response);
-      res.redirect("/list");
-    });
+    }).then(res.redirect("/list"));
   });
 
   // Middleware to not allow access to the list without being signed in
