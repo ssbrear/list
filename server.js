@@ -17,9 +17,8 @@ const { urlencoded } = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 //// MIDDLEWARE
-// AUTHENTICATION
-app.use(passport.initialize());
 // DATA PARSING
+app.use(express.static("public"));
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
 // ALLOWS THE USER TO STAY LOGGED IN WHILE NAVIGATING THE SITE
@@ -30,13 +29,14 @@ app.use(
     saveUninitialized: true,
   })
 );
+// AUTHENTICATION
+app.use(passport.initialize());
 app.use(passport.session());
 
 ////// HANDLEBARS
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 ////// ROUTES
-require("./routes/html")(app);
 require("./routes/db")(app);
 
 ////// RUN SERVER

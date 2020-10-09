@@ -51,6 +51,10 @@
         li {
             justify-content: center;
         }
+
+        .complete-button {
+          margin: 16px;
+        }
   </style>
   <script
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -103,7 +107,10 @@
           <ul id="list-items">
             {{#each item}}
               <li>
-                {{this}}
+                {{this.item}}
+                <button class="btn btn-success complete-button">
+                  Complete
+                </button>
               </li>
             {{/each}}
           </ul>
@@ -112,3 +119,4 @@
     </div>
   </div>
 </div>
+<script src="list.js"></script>
