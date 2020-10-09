@@ -30,7 +30,7 @@ module.exports = (app) => {
   });
 
   // Loads login/sign up page
-  app.get("/", (req, res) => {
+  app.get("/", checkNotAuth, (req, res) => {
     res.render("index");
   });
 
@@ -65,5 +65,11 @@ module.exports = (app) => {
       return next();
     }
     res.redirect("/");
+  }
+  function checkNotAuth(req, res, next) {
+    if (req.isAuthenticated()) {
+      res.redirect("/list");
+    }
+    return next();
   }
 };
