@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+
+button {
+  display: inline-block;
+}
+#signup-form {
+  transition: all 1s;
+}
+#login-form {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+img {
+  width: 200%;
+}
+
+body {
+  background-image: url("https://tinyurl.com/y4ynx5lz");
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+form {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 2.5rem;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  font-family: Ranchers;
+}
+
+.btn-div {
+  text-align: center;
+}
+
+.btn.btn-primary,
+.btn.btn-danger {
+  border-radius: 20px;
+}
+
+#already-btn,
+#donthave-btn {
+  background-color: white;
+  border: none;
+}
+#donthave-btn {
+  color: blue;
+}
+#already-btn {
+  color: red;
+}

@@ -1,13 +1,47 @@
-<div class="jumbotron">
-    <form action="/api/login" method="POST">
-        <input name="username" type="text">
-        <input name="password" type="password">
-        <button type="submit">Log In</button>
-    </form>
-    <br>
-    <form action="/api/signup" method="POST">
-        <input name="username" type="text">
-        <input name="password" type="password">
-        <button type="submit">Sign Up</button>
-    </form>
-</div>
+<head>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<header class="container">
+    <div class="row mt-5">
+        <h1 class="col">
+            My List
+        </h1>
+    </div>
+</header>
+<main class="container">
+    <div class="row">
+        <div id="first-form" class="col-12">
+            <form class="form" id="signup-form" action="/api/signup" method="POST">
+                <div class="form-group">
+                    <label for="sign-username">Username</label>
+                    <input id="sign-username" class="form-control" name="username" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="sign-password">Password</label>
+                    <input id="sign-password" class="form-control" name="password" type="password">
+                </div>
+                <button type="button" class="mb-2" id="already-btn">Already have an account?</button>
+                <div class="btn-div">
+                    <button class="btn btn-danger" type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+        <div id="second-form" class="col-12">
+            <form class="form" id="login-form" action="/api/login" method="POST">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input id="login-username" class="form-control" name="username" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" class="form-control" name="password" type="password">
+                </div>
+                <button type="button" class="mb-2" id="donthave-btn">Dont have have an account?</button>
+                <div class="btn-div">
+                    <button class="btn btn-primary" type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<script src="scripts/index.js"></script>

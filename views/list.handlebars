@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" href="styles/list.css" />
+</head>
 <!-- Header -->
 <header class="container-fluid">
   <div class="row">
@@ -25,12 +28,7 @@
         <div class="card-text">
           <form action="/api/createitem" method="POST">
             <div class="form-group">
-              <input
-                type="text"
-                placeholder="Add a list item"
-                id="input-list"
-                name="item"
-              />
+              <input type="text" placeholder="Add a list item" id="input-list" name="item" />
               <button type="submit" id="submit-btn" class="btn btn-primary">
                 Submit
               </button>
@@ -42,14 +40,14 @@
           <!-- Empty list at the beginning before any items are added -->
           <ul id="list-items">
             {{#each item}}
-              <li>
-                <div data-id={{this.id}} class="item-div">
-                  {{this.item}}
-                </div>
-                <button type="submit" class="btn btn-success complete-button">
-                  Complete
-                </button>
-              </li>
+            <li>
+              <div data-id={{this.id}} class="item-div">
+                {{this.item}}
+              </div>
+              <button type="submit" class="btn btn-success complete-button">
+                Complete
+              </button>
+            </li>
             {{/each}}
           </ul>
         </div>
@@ -57,4 +55,4 @@
     </div>
   </div>
 </div>
-<script src="list.js"></script>
+<script src="scripts/list.js"></script>
