@@ -76,3 +76,9 @@ li {
     width: 150px;
   }
 }
+
+@media screen and (max-width: 329px) {
+  ul {
+    padding: 0;
+  }
+}
