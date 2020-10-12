@@ -1,9 +1,10 @@
-$("#already-btn, #donthave-btn").on("click", () => {
+$(document).on("click", "#already-btn, #donthave-btn", () => {
   // Establish which elements are in which positions
   const firstFormParent = $("#first-form");
   const firstForm = firstFormParent.children().eq(0);
   const secFormParent = $("#second-form");
   const secForm = secFormParent.children().eq(0);
+  console.log("animation")
 
   animateFirstDown(firstForm);
   hideFirst(firstForm, 300);
@@ -17,7 +18,7 @@ function animateFirstDown(form) {
 function hideFirst(form, delay) {
   setTimeout(() => {
     form.css({
-      display: "none",
+      visibility: "hidden",
       marginTop: "0",
       opacity: 0,
     });

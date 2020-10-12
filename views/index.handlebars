@@ -11,22 +11,6 @@
 <main class="container">
     <div class="row">
         <div id="first-form" class="col-12">
-            <form class="form" id="signup-form" action="/api/signup" method="POST">
-                <div class="form-group">
-                    <label for="sign-username">Username</label>
-                    <input id="sign-username" class="form-control" name="username" type="text">
-                </div>
-                <div class="form-group">
-                    <label for="sign-password">Password</label>
-                    <input id="sign-password" class="form-control" name="password" type="password">
-                </div>
-                <button type="button" class="mb-2" id="already-btn">Already have an account?</button>
-                <div class="btn-div">
-                    <button class="btn btn-danger" type="submit">Register</button>
-                </div>
-            </form>
-        </div>
-        <div id="second-form" class="col-12">
             <form class="form" id="login-form" action="/api/login" method="POST">
                 <div class="form-group">
                     <label for="login-username">Username</label>
@@ -39,6 +23,22 @@
                 <button type="button" class="mb-2" id="donthave-btn">Dont have have an account?</button>
                 <div class="btn-div">
                     <button class="btn btn-primary" type="submit">Log In</button>
+                </div>
+            </form>
+        </div>
+        <div id="second-form" class="col-12">
+            <form class="form" id="signup-form" action="/api/signup" method="POST">
+                <div class="form-group">
+                    <label for="sign-username">Username</label>
+                    <input id="sign-username" class="form-control" name="username" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="sign-password">Password</label>
+                    <input id="sign-password" class="form-control" name="password" type="password">
+                </div>
+                <button type="button" class="mb-2" id="already-btn">Already have an account?</button>
+                <div class="btn-div">
+                    <button class="btn btn-danger" type="submit">Register</button>
                 </div>
             </form>
         </div>
