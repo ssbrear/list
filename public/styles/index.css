@@ -59,3 +59,7 @@ h1 {
 #already-btn {
   color: red;
 }
+#error-msg {
+  color: red;
+  font-size: 20px;
+}

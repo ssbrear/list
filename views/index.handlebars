@@ -12,6 +12,7 @@
     <div class="row">
         <div id="first-form" class="col-12">
             <form class="form" id="login-form" action="/api/login" method="POST">
+            <span id="error-msg">{{message}}</span>
                 <div class="form-group">
                     <label for="login-username">Username</label>
                     <input id="login-username" class="form-control" name="username" type="text">

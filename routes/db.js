@@ -16,9 +16,14 @@ module.exports = (app) => {
       });
   });
   // VALIDATE EXISTING USER
-  app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    res.redirect("/list");
-  });
+  app.post(
+    "/api/login",
+    passport.authenticate("local", {
+      successRedirect: "/list",
+      failureRedirect: "/",
+      failureFlash: true,
+    })
+  );
 
   // CREATE NEW ITEM ON USERLISTS TABLE
   app.post("/api/createitem", (req, res) => {
@@ -31,7 +36,7 @@ module.exports = (app) => {
 
   // Loads login/sign up page
   app.get("/", checkNotAuth, (req, res) => {
-    res.render("index");
+    res.render("index", {message: req.flash('error')});
   });
 
   // Renders the list page with all of the user's items

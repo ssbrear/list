@@ -14,6 +14,7 @@ const session = require("express-session");
 ////// PASSPORT
 const passport = require("./config/passport");
 const { urlencoded } = require("express");
+const flash = require("connect-flash");
 const app = express();
 const PORT = process.env.PORT || 3000;
 //// MIDDLEWARE
@@ -32,6 +33,7 @@ app.use(
 // AUTHENTICATION
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 ////// HANDLEBARS
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
